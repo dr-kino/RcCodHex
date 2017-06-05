@@ -56,7 +56,7 @@ static struct argp_option options[] =
 	{"verbose",     key_verbose ,   0,              0, "Produce verbose output",                        0},
 	{"code",        key_code,       "CODE_TYPE",    0, "Coding protocol with CODE_TYPE argument",       0},
 	{"decode",      key_decode,     "DECODE_TYPE",  0, "Decoding protocol with DECODE_TYPE argument",   0},
-	{"execute",     key_execute,    "COMMAND",      0, "Execute COMMAND on this card",                  0},
+	{"execute",     key_execute,    "COMMAND",      0, "Execute COMMAND in the prompt",                 0},
 	{"batch",       key_batch,      "BATCH",        0, "Execute batch file BATCH",                      0},
 	{ 0, 0, 0, 0, 0, 0}
 };
