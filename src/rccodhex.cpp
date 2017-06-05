@@ -26,7 +26,7 @@ int main (int argc, char **argv){
     	/* failure */
     	result |= -1;
     }
-    
+
     if (exec_batch(&arguments))
     {
         cout << "Failure to exec batch file" << endl;

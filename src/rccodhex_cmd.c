@@ -1,6 +1,8 @@
 #include<stdlib.h>
 #include<string.h>
 #include"../include/rccodhex_cmd.h"
+#include"../include/exec-codhex_cmd.h"
+#include"split-bitstream_wrapper.h"
 
 /*******************************************************************************
 ***  Global Variables  *********************************************************
@@ -90,13 +92,19 @@ void display_options(struct arguments* arguments)
 /* exec prompt option */
 int exec_command(struct arguments* arguments)
 {
-	int result = 0;
-	int cmdresult = 0;
+    int result = 0;
+    int cmdresult = 0;
+
+    CSplitBitstream *p = NULL;
+
+    p = SplitBitstream_new('A');
+    
+    Chex2bin(p);
 
 	/* Execute command if any available */
 	if (arguments->cmd)
 	{
-		//cmdresult =  CMD_ExecFPGA0(pFpga, arguments->cmd_arg);
+		cmdresult =  CMD_RcCodhex(arguments->cmd_arg);
 		/* Execute command */
 		if (cmdresult == -1)
 		{
@@ -104,7 +112,7 @@ int exec_command(struct arguments* arguments)
 		}
 		else if(cmdresult == 1)
 		{		
-			//PIPE_EndSimulation(pPipe);
+			// Executa comando específco //
 		}
 		else
 		{
@@ -146,7 +154,7 @@ int exec_batch(struct arguments* arguments)
 			while(!feof(pFile) && !exec)
 			{
 				/* Execute command */
-				//exec = CMD_ExecFPGA0(pFpga, str);
+				//exec = Executa comando específico //
 				if (exec)
 				{
 					/* Command failed */
