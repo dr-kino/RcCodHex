@@ -5,6 +5,9 @@ bin_PROGRAMS = rccodhex
 rccodhex_SOURCES = \
 	../src/gen_cmd.c \
 	../src/rccodhex_cmd.c \
+	../src/exec-codhex_cmd.c \
+	../src/split-bitstream.cpp \
+	../src/split-bitstream_wrapper.cpp \
 	../src/rccodhex.cpp
 
 rccodhex_CPPFLAGS = ${USERAPP_CFLAGS} ${DBGFLAGS} \
