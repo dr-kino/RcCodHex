@@ -36,12 +36,6 @@ int CMD_RcCodhex(const char* cmd){
     char* subcommand[4];
     char* pCmd = 0;
 
-    CSplitBitstream *p = NULL;
-
-    p = SplitBitstream_new('A');
-    
-    Chex2bin(p);
-
     do
     {
     

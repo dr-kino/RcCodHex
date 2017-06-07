@@ -5,8 +5,7 @@ using namespace std;
 
 extern "C"{
 
-CSplitBitstream * SplitBitstream_new (char hex_value){
-    cout << "passei aqui" << endl;
+CSplitBitstream * SplitBitstream_new (char *hex_value){
     SplitBitstream *p = new SplitBitstream(hex_value);
 
     //p->setHex2bin(hex_value);
@@ -17,14 +16,19 @@ CSplitBitstream * SplitBitstream_new (char hex_value){
 }
 
 void Chex2bin(const CSplitBitstream *chex_value){
-    cout << "passei aqui" << endl;
     SplitBitstream *p = (SplitBitstream*)chex_value;
+    //cout << sizeof() << endl;
     p->hex2bin();
-    cout << chex_value << endl;
+    //cout << chex_value << endl;
+}
+
+void getSplitBitstream(CSplitBitstream *chex_value, char *get_value){
+    SplitBitstream *p = (SplitBitstream *)chex_value; 
+
+    p->getHex2bin(get_value);
 }
 
 void SplitBitstream_delete(CSplitBitstream *chex_value){
-    cout << "passei aqui" << endl;
     SplitBitstream *p = (SplitBitstream *)chex_value; 
 
     delete p;

@@ -10,17 +10,17 @@
 
 class SplitBitstream{
   public:
-    SplitBitstream(char hex_value);
+    SplitBitstream(char *hex_value);
     //virtual                  ~SplitBitstream();
 
-    void setHex2bin(char hex_value);
+    void getHex2bin(char *hex_value);
 
     void hex2bin();
 
   private:
-    char hex2bin_value;
+    std::string hex2bin_value;
+    std::string bitstream_value;
 
 };
-
 
 #endif // SPLIT_BITSTREAM

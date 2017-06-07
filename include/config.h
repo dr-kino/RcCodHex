@@ -29,4 +29,4 @@
 #define __LINUX__ /**/
 
 /* Pasta raiz do projeto. */
-#define __SRCROOT__ "/home/rcavalcanti/Projetos/RcCodhex/rc-codhex/build/"
+#define __SRCROOT__ "/home/rcavalcanti/tmp/rc-codhex/build/"

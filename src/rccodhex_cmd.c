@@ -94,12 +94,18 @@ int exec_command(struct arguments* arguments)
 {
     int result = 0;
     int cmdresult = 0;
+    char *value;
 
     CSplitBitstream *p = NULL;
 
-    p = SplitBitstream_new('A');
+    p = SplitBitstream_new("ABCDEFABCDEFABCDEFABCDEF");
     
     Chex2bin(p);
+
+    getSplitBitstream(p, value);
+
+    //printf("Valor: %s\n", value);
+    printf("%s\n", value);
 
 	/* Execute command if any available */
 	if (arguments->cmd)

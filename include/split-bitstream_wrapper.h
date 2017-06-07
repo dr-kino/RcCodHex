@@ -7,8 +7,9 @@ typedef void CSplitBitstream;
 extern "C"{
 #endif
 
-CSplitBitstream * SplitBitstream_new(char hex_value);
+CSplitBitstream * SplitBitstream_new(char *hex_value);
 void Chex2bin(const CSplitBitstream *chex_value);
+void getSplitBitstream(CSplitBitstream *chex_value, char *get_value);
 void SplitBitstream_delete(CSplitBitstream *p);
 
 #ifdef __cplusplus
